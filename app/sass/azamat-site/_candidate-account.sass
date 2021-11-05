@@ -1,0 +1,218 @@
+
+.title2
+  font-size: 20px
+  color: $black
+
+.black
+  color: $black !important
+
+.back-page
+  display: flex
+  align-items: center
+  img
+    cursor: pointer
+    width: 25px
+    height: 25px
+    margin-right: 30px
+
+.candidate-account
+  padding-bottom: 100px
+  margin-top: 30px
+  &__inner
+    display: flex
+    justify-content: space-between
+    position: relative
+    margin-top: 30px
+  &__sidebar
+    width: 30%
+    position: sticky
+    height: 100%
+    top: 20px
+    .person, .info
+      background: #FCFCFC
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 10px
+      overflow: hidden
+    .person
+      width: 100%
+      margin-bottom: 20px
+      &__inner
+        padding: 20px
+      &__img
+        img
+          width: 100%
+          height: 197px
+          object-fit: cover
+          object-position: center
+      &__suptitle
+        color: #575757
+        margin-top: 2px
+        font-size: 14px
+      &__subtitle
+        font-size: 16px
+        color: #ACACAC
+        margin-top: 10px
+        overflow: hidden
+        display: -webkit-box
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+      .button
+        margin-top: 35px
+      &__vote
+        text-align: center
+        margin-top: 15px
+        color: $black
+        font-size: 16px
+    .info
+      &__inner
+        padding: 20px
+      &__wrap
+        margin-top: 20px
+        display: flex
+        align-items: center
+        font-size: 16px
+        color: $black
+        cursor: pointer
+        img
+          width: 20px
+          height: 20px
+          margin-right: 18px
+  &__content
+    width: 68%
+  &__block
+    background: #FFFFFF
+    border-radius: 10px
+    padding: 40px 40px 45px 40px
+    & + .candidate-account__block
+      margin-top: 20px
+    .description
+      margin-top: 20px
+      font-size: 16px
+      color: #636363
+      line-height: 20px
+    .location
+      margin-top: 25px
+      span
+        &:first-child
+          color: $darkGrey
+          font-size: 14px
+        &:last-child
+          color: $black
+          font-size: 16px
+          margin-top: 6px
+          display: block
+    .specification
+      border-top: 0.5px solid #ACACAC
+      margin-top: 25px
+      padding-top: 20px
+      margin-right: -20px
+      padding-right: 20px
+      margin-bottom: 25px
+      display: flex
+      &__wrap
+        & + .specification__wrap
+          margin-left: 90px
+        h2
+          font-size: 20px
+          font-family: 'font-lg'
+          color: $black
+          margin-bottom: 8px
+        p
+          margin-bottom: 0
+          color: #636363
+          font-size: 16px
+  &__hide
+    position: relative
+    .blured
+      position: absolute
+      bottom: 0
+      width: 100%
+      height: 40%
+      left: 0
+      background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0.95),#FFF)
+  &__showBtn
+    color: $green
+    cursor: pointer
+    font-size: 16px
+    text-decoration: underline
+    text-align: center
+    margin-top: 10px
+    font-family: 'font-md'
+  &__questions
+    margin-top: 28px
+    .question
+      &__items
+        margin-top: 20px
+      &__item
+        background: $white
+        border-radius: 10px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 25px 20px 25px 40px
+        cursor: pointer
+        & + .question__item
+          margin-top: 12px
+        p
+          margin-bottom: 0
+          color: #575757
+          font-size: 18px
+          overflow: hidden
+          display: -webkit-box
+          -webkit-line-clamp: 1
+          -webkit-box-orient: vertical
+          width: calc( 100% - 30px )
+        img
+          width: 15px
+          height: 15px
+
+@media (max-width: 767px)
+  .candidate-account
+    padding-bottom: 100px
+    &__inner
+      flex-wrap: wrap
+    &__block
+      padding: 25px
+      .specification
+        flex-direction: column
+        margin-right: 0
+        padding-right: 0
+        &__wrap
+          & + .specification__wrap
+            margin-left: 0
+            margin-top: 25px
+    &__sidebar
+      position: unset
+      width: 100%
+      .person
+        &__img
+          img
+            height: 220px
+      .info
+        margin-bottom: 20px
+    &__content
+      width: 100%
+    &__questions
+      .question
+        &__item
+          padding-left: 20px
+          padding-top: 20px
+          padding-bottom: 20px
+          p
+            font-size: 16px
+
+@media (min-width: 768px) and (max-width: 992px)
+  .candidate-account
+    &__inner
+      flex-wrap: wrap
+    &__sidebar
+      position: unset
+      width: 100%
+      .person
+        &__img
+          img
+            height: 330px
+      .info
+        margin-bottom: 20px
+    &__content
+      width: 100%
