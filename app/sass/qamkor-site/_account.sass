@@ -1,0 +1,421 @@
+
+.title2
+  font-size: 20px
+  color: $black
+
+.black
+  color: $black !important
+
+.account
+  padding-bottom: 170px
+  &__inner
+    display: flex
+    justify-content: space-between
+    position: relative
+  &__sidebar
+    width: 30%
+    position: sticky
+    height: 100%
+    top: 20px
+    .person, .helped, .repost
+      background: #FCFCFC
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 10px
+      overflow: hidden
+    .person
+      width: 100%
+      margin-bottom: 20px
+      &__inner
+        padding: 15px 20px 25px 20px
+      &__img
+        img
+          width: 100%
+          height: 197px
+          object-fit: cover
+          object-position: center
+      &__subtitle
+        font-size: 14px
+        color: #ACACAC
+        margin-top: 5px
+      .button-blue
+        width: 100%
+        margin-top: 24px
+        height: 45px
+        padding-top: 0
+        padding-bottom: 0
+      .button-white
+        margin-top: 20px
+        border: 1px solid #6BB6E4
+        box-sizing: border-box
+        border-radius: 7px
+        background: $white
+        height: 45px
+        color: $blue
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-right: 30px
+        img
+          margin-right: 12px
+
+    .helped
+      padding: 24px 24px 30px 24px
+      margin-bottom: 20px
+      .title2
+        margin-bottom: 25px
+      &__empty
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        img
+          width: 34px
+          height: 34px
+          margin-right: 20px
+        p
+          margin-bottom: 0
+          font-size: 16px
+          line-height: 20px
+          color: #636363
+          margin-right: 20px
+      &__show
+        color: #636363
+        margin-top: 35px
+        font-size: 16px
+        font-family: 'font-md'
+        text-decoration: underline
+        cursor: pointer
+      &__wrap
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        &-noImage
+          width: 40px
+          height: 40px
+          overflow: hidden
+          border-radius: 100%
+          margin-right: 30px
+          background: #E4F6FF
+          display: flex
+          align-items: center
+          justify-content: center
+          font-size: 24px
+          color: #ABDDF5
+          text-transform: uppercase
+        img
+          width: 40px
+          height: 40px
+          border-radius: 100%
+          margin-right: 30px
+        span
+          &:first-child
+            font-size: 16px
+            color: #575757
+            width: 100%
+            overflow: hidden
+            display: -webkit-box
+            -webkit-line-clamp: 1
+            -webkit-box-orient: vertical
+          &:last-child
+            font-size: 16px
+            color: $black
+            width: 100%
+        & + .helped__wrap
+          margin-top: 20px
+    .repost
+      padding: 24px
+      &__wrap
+        margin-top: 20px
+        display: flex
+        a
+          border: 1px solid #575757
+          box-sizing: border-box
+          width: 34px
+          height: 34px
+          border-radius: 16px
+          display: flex
+          justify-content: center
+          align-items: center
+          cursor: pointer
+          img
+            width: 20px
+            height: 20px
+            object-fit: contain
+            object-position: center
+          & + a
+            margin-left: 15px
+  &__content
+    width: 68%
+  &__block
+    background: #FFFFFF
+    border-radius: 10px
+    padding: 40px 40px 45px 40px
+    & + .account__block
+      margin-top: 20px
+    .description
+      margin-top: 40px
+      font-size: 16px
+      color: #636363
+      line-height: 20px
+    .location
+      margin-top: 20px
+      span
+        &:first-child
+          color: $darkGrey
+          font-size: 16px
+          display: flex
+          align-items: center
+          img
+            margin-right: 6px
+        &:last-child
+          color: $black
+          font-size: 17px
+          margin-top: 6px
+          display: block
+  &__block-click
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__block-content
+    padding-bottom: 20px
+  &__opening
+    padding-bottom: 35px !important
+  &__head
+    @include flex
+  &__flex
+    display: flex
+    align-items: center
+    img
+      width: 32px
+      height: 32px
+      margin-right: 15px
+  &__gathered
+    margin-left: 5px
+  &__important
+    margin-top: 40px
+    margin-bottom: -20px
+    letter-spacing: -0.02em
+    font-size: 24px
+    font-family: 'font-md'
+    color: #575575
+  &__months
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+    &-wrap
+      margin-top: 60px
+    &-btns
+      margin-top: 60px
+      display: flex
+      justify-content: space-between
+      button
+        font-size: 16px !important
+        width: 48%
+        height: 45px
+      .button-white
+        border: 1px solid #6BB6E4
+        box-sizing: border-box
+        border-radius: 5px
+        background: $white
+        color: #747474
+        img
+          margin-right: 8px
+
+  &__month
+    cursor: pointer
+    background: $blue
+    border-radius: 5px
+    margin-top: 10px
+    font-size: 14px
+    color: $white
+    display: flex
+    align-items: center
+    padding: 5px 10px
+    margin-right: 10px
+    img
+      margin-left: 6px
+  &__result
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 35px
+    .button-blue
+      width: 35%
+    &>div
+      width: 100%
+      span
+        font-size: 18px
+        color: $black
+        padding-left: 20px
+        position: relative
+        & + span
+          margin-left: 20px
+        &::after
+          content: ''
+          width: 10px
+          height: 10px
+          border-radius: 10px
+          position: absolute
+          left: 0
+          top: calc(50% - 4px)
+          background: #20A4F5
+        &:last-child
+          &::after
+            background: #E86A84 !important
+  &__process
+    background: #F1F1F1
+    border-radius: 3px
+    overflow: hidden
+    height: 6px
+    width: 100%
+    margin-bottom: 20px
+    display: flex
+    position: relative
+  &__process-blue
+    height: 100%
+    background: #20A4F5
+  &__process-red
+    background: #E86A84
+    height: 100%
+  &__form
+    margin-top: 50px
+    div
+      @include flex
+      & + div
+        border-top: 1px solid #ACACAC
+        padding-top: 10px
+        margin-top: 10px
+    p
+      font-size: 18px
+      color: $black
+      margin-bottom: 0
+      width: 45%
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+    span
+      font-size: 18px
+      color: $darkGrey
+      width: 45%
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+    .checkbox
+      width: 24px
+      height: 24px
+      border: 1px solid #ACACAC
+      border-radius: 3px
+      border-radius: 3px
+      visibility: hidden
+      cursor: pointer
+      position: relative
+      font-size: 17px
+      &:after
+        content: " "
+        background-color: white
+        border: 1px solid #ACACAC
+        position: absolute
+        border-radius: 3px
+        left: 0
+        @include flex(center,center)
+
+        top: 0
+        width: 100%
+        height: 100%
+        visibility: visible
+      &:checked:after
+        border: none
+        border-radius: 3px
+        background-color: #6BB6E4
+        content: "\2713"
+    .button-blue
+      margin-top: 65px
+      width: 50%
+
+.help-slider
+  background: $white
+  padding-top: 77px
+  padding-bottom: 90px
+  overflow: hidden
+  .title
+    margin-bottom: 50px
+  // .help__items
+  //   overflow-x: scroll
+  //   overflow-y: hidden
+  //   flex-wrap: nowrap
+  //   width: 132%
+  //   justify-content: space-between
+  // .help__item
+  //   width: 337px
+  //   margin-right: 0
+  //   &:nth-child(3n+3)
+  //     margin-right: 0
+
+@media (max-width: 767px)
+  .account
+    padding-bottom: 100px
+    &__inner
+      flex-wrap: wrap
+    &__block
+      padding: 25px
+    &__head
+      flex-wrap: wrap
+    &__gathered
+      margin-top: 20px
+      width: 100%
+      font-size: 24px !important
+    &__sidebar
+      position: unset
+      width: 100%
+      .person
+        &__img
+          img
+            height: 220px
+      .repost
+        margin-bottom: 20px
+    &__content
+      width: 100%
+    &__result
+      margin-top: 20px
+      flex-wrap: wrap
+      &>div
+        width: 100%
+        span
+          display: block
+          & + span
+            margin-left: 0
+            margin-top: 3px
+      .button-blue
+        width: 100%
+        margin-top: 20px
+    &__form
+      .button-blue
+        width: 100%
+        margin-top: 35px
+    &__months
+      &-btns
+        flex-wrap: wrap
+        button
+          width: 100% !important
+          padding-left: 0 !important
+          padding-right: 0 !important
+          & + button
+            margin-top: 20px
+      
+@media (min-width: 768px) and (max-width: 992px)
+  .account
+    &__inner
+      flex-wrap: wrap
+    &__sidebar
+      position: unset
+      width: 100%
+      .person
+        &__img
+          img
+            height: 330px
+      .repost
+        margin-bottom: 20px
+    &__content
+      width: 100%
