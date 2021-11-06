@@ -610,6 +610,112 @@
             font-size: 18px
             margin-left: 10px
 
+  // Страница Описание проблемы
+
+  .details
+    margin: -20px -20px -25px -20px
+    &__categories
+      display: flex
+      flex-wrap: wrap
+    &__category
+      background: #C2F1DC
+      border-radius: 30px
+      color: #575757
+      display: flex
+      align-items: center
+      padding: 8px 18px
+      margin-bottom: 10px
+      & + .details__category
+        margin-left: 10px
+      img
+        width: 20px
+        height: 20px
+        margin-right: 8px
+    &__slider
+      margin-top: 10px
+    &__slider-main
+      width: 100%
+      margin-bottom: 20px
+      position: relative
+      img
+        width: 100%
+        height: 456px
+        object-fit: cover
+        object-position: center
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.24) 11.15%, rgba(0, 0, 0, 0) 45.22%), url(.png)
+        background-blend-mode: darken, normal
+        border-radius: 10px
+    &__slider-pagination
+      background: #C2F1DC
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      border-radius: 30px
+      position: absolute
+      left: 10px
+      bottom: 15px
+      padding: 7px 18px
+      color: #575757
+      font-size: 14px
+    &__slider-other
+      display: flex
+      overflow-x: scroll
+      img
+        width: 100px
+        height: 70px
+        object-fit: cover
+        object-position: center
+        border-radius: 5px
+        cursor: pointer
+        & + img
+          margin-left: 10px
+    &__date
+      color: #ACACAC
+      font-size: 16px
+      margin-top: 10px
+    &__location
+      color: #575757
+      font-size: 16px
+      letter-spacing: -0.01em
+      line-height: 24px
+      border-top: 0.5px solid #F1F1F1
+      padding-top: 15px
+      margin-top: 15px
+    &__user
+      display: flex
+      align-items: center
+      color: #575757
+      font-size: 16px
+      letter-spacing: -0.01em
+      margin-top: 30px
+      img
+        width: 33px
+        height: 33px
+        border-radius: 100%
+        margin-right: 10px
+
+  .maps
+    margin-bottom: 95px
+    &__inner
+      iframe
+        width: 100%
+        height: 385px
+    &__wrap
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 40px
+      .location
+        display: flex
+        align-items: center
+        img
+          width: 28px
+          height: 28px
+          margin-right: 5px
+        span
+          font-size: 16px
+          letter-spacing: -0.01em
+          border-bottom: 1px solid #000
+          color: $black
+
 @media (max-width: 767px)
   .azamat-site
     .banner-first
@@ -780,6 +886,24 @@
               width: 48%
               margin-bottom: 15px
               margin-right: 0 !important
+
+    .details
+      margin: 0
+      &__categories
+        flex-wrap: nowrap
+        overflow-x: scroll
+      &__slider-main
+        img
+          height: 180px
+      &__slider-pagination
+        padding: 6px 12px
+        font-size: 13px
+
+    .maps
+      &__wrap
+        flex-wrap: wrap
+        .location
+          margin-top: 15px
 
 @media (min-width: 768px) and (max-width: 991px)
   .azamat-site
