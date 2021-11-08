@@ -250,6 +250,62 @@
             padding-left: 0
             margin-left: 15px
 
+.popup-azamat
+  &__status
+    padding-bottom: 30px
+    margin-bottom: 15px
+    border-bottom: 1px solid #F2F4F8
+    &>div
+      display: flex
+      align-items: center
+      img
+        width: 32px
+        height: 32px
+        margin-right: 15px
+      .title
+        margin-bottom: 0
+  &__user
+    display: flex
+    align-items: center
+    padding-bottom: 15px
+    border-bottom: 1px solid #F2F4F8
+    margin-bottom: 30px
+    img
+      width: 80px
+      height: 80px
+      border-radius: 100%
+      object-fit: cover
+      object-position: center
+      margin-right: 20px
+    &>div
+      p
+        font-family: 'font-md'
+        color: $black
+        font-size: 22px
+        margin-bottom: 5px
+      span
+        display: block
+        color: #575757
+        font-size: 15px
+  &__descr
+    padding-right: 30px
+    margin-bottom: 20px
+    max-height: 260px
+    overflow-y: scroll
+    &::-webkit-scrollbar
+      width: 4px
+    &::-webkit-scrollbar-track
+      background-color: #F1F1F1
+      border-radius: 0px
+    &::-webkit-scrollbar-thumb
+      background-color: $green
+      border-radius: 0px
+    p
+      margin-bottom: 0
+      color: #636363
+      font-size: 16px
+      line-height: 22px
+
 @media (min-width: 768px) and (max-width: 991px)
   .azamat-site
     .profile
@@ -314,6 +370,16 @@
             border-left: none
             padding-left: 0
             margin-left: 30px
+
+.popup-azamat
+  &__status
+    img
+      width: 24px !important
+      height: 24px !important
+  &__user
+    img
+      width: 50px !important
+      height: 50px !important
 
 @media (min-width: 992px) and (max-width: 1199px)
   .azamat-site
