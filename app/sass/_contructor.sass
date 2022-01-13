@@ -1,0 +1,70 @@
+.constructor
+  overflow: hidden
+
+  *
+    color: black !important
+
+  & img
+    width: 100%
+    object-fit: cover
+    object-position: center
+    height: auto
+    margin: 30px 0
+
+  & p strong, .constructor strong
+    font-size: 24px
+    line-height: 28px
+    font-family: "font-lg"
+    color: black
+    text-align: center
+    position: relative
+    padding: 30px 7%
+    display: block
+
+  & p strong::after, .constructor strong::after
+    content: ''
+    position: absolute
+    left: calc(50% - 110px)
+    background: #25B072
+    width: 220px
+    height: 2px
+
+  & p strong::before, .constructor strong::before
+    content: ''
+    position: absolute
+    left: calc(50% - 110px)
+    background: #25B072
+    width: 220px
+    height: 2px
+
+  & p
+    color: #636363 !important
+    font-size: 18px
+    line-height: 26px
+    margin-bottom: 0
+
+  & h3
+    color: #000
+    font-size: 26px
+    font-family: "font-lg"
+
+  & p strong::after, .constructor strong::after
+    top: 0
+
+  & p strong::before, .constructor strong::before
+    bottom: 0
+
+@media (max-width: 767px)
+  .constructor p strong, .constructor strong
+    &::after, &::before
+      left: 7%
+      right: 7%
+      background: #25B072
+      width: 86%
+      height: 2px
+
+  .constructor h3
+    font-size: 20px
+
+  .constructor p strong, .constructor strong
+    padding: 30px 3%
