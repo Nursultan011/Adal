@@ -493,6 +493,213 @@
         line-height: 25px
         & + p
           margin-top: 20px
+    &__success
+      background-color: $green
+      height: 237px
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border-radius: 5px
+      div
+        font-size: 16px
+        text-align: center
+        color: $white
+        margin-top: 10px
+        margin-bottom: 15px
+      a
+        color: $white !important
+        font-size: 14px
+        text-decoration: underline !important
+
+  .info-profile
+    &__inner
+      display: flex
+      justify-content: space-between
+      width: 100%
+      padding-top: 50px
+      padding-bottom: 100px
+    &__card
+      background: #FFFFFF
+      border-radius: 10px
+      width: 30%
+
+  .election
+    padding-bottom: 100px
+    &__suptitle
+      color: #808080
+      font-size: 20px
+      margin-bottom: 40px
+    &__card
+      background-color: $green
+      background-image: url('../../img/info/council-item-bg.svg')
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: left center
+      border-radius: 10px
+      padding: 30px 25px 30px 70px
+      margin-bottom: 60px
+      position: relative
+      p
+        font-size: 18px
+        line-height: 22px
+        margin-bottom: 0
+        & + p
+          margin-top: 20px
+      &::after
+        content: ''
+    &__subtitle
+      font-size: 20px
+      color: $black
+    &__tabs
+      margin-top: 25px
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      .active
+        background: $green !important
+        span
+          color: $white !important
+        svg
+          path
+            stroke: $white
+    &__tab
+      display: flex
+      justify-content: space-between
+      align-items: center
+      box-shadow: 0px 0px 10px 5px rgba(36, 99, 115, 0.05)
+      border-radius: 5px
+      text-transform: capitalize
+      background: $white
+      width: 48%
+      margin-bottom: 25px
+      padding: 0 20px
+      height: 50px
+      cursor: pointer
+      transition: 0.3s
+      span
+        transition: 0.3s
+        color: $black
+        overflow: hidden
+        display: -webkit-box
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+      svg
+        margin-left: 15px
+        width: 20px
+        height: 20px
+        transition: 0.3s
+        path
+          transition: 0.3s
+      &:hover
+        background: $green
+        span
+          color: $white
+        svg
+          path
+            stroke: $white
+    &__info
+      border-top: 2px solid $green
+      margin-top: 60px
+      padding-top: 60px
+    &__chapters
+      margin-top: 60px
+    &__chapter
+      & + .election__chapter
+        margin-top: 20px
+    &__chapter-title
+      cursor: pointer
+      color: $black
+      font-size: 20px
+      text-transform: capitalize
+      display: flex
+      align-items: center
+      img
+        margin-left: 20px
+        width: 16px
+        height: 16px
+    &__content
+      padding-top: 40px
+      padding-bottom: 20px
+    &__warning
+      border: 1px solid #F1C40F
+      border-radius: 10px
+      padding: 30px 35px
+      display: flex
+      p
+        margin-bottom: 0
+        color: $black
+        font-size: 18px
+        line-height: 22px
+        margin-left: 30px
+    &__result
+      display: flex
+      margin-top: 60px
+      justify-content: space-between
+      .election__suptitle
+        font-size: 28px !important
+    &__left
+      width: 40%
+    &__right
+      width: 55%
+    &__video
+      position: relative
+      border-radius: 10px
+      overflow: hidden
+      img,video
+        width: 100%
+        height: 250px
+        object-fit: cover
+        object-position: center
+    &__play
+      position: absolute
+      bottom: 20px
+      left: 20px
+      cursor: pointer
+      svg
+        width: 30px
+        height: 30px
+    &__appeal
+      margin-top: 25px
+      background: $green
+      border-radius: 10px
+      padding: 30px 30px
+      p
+        margin-bottom: 30px
+        font-size: 18px
+        line-height: 22px
+      button
+        border-radius: 10px
+        border: 1px solid $white
+        color: $white
+        font-size: 18px
+        width: 100%
+        text-align: center
+        padding: 10px
+        background: transparent
+    &__service-btn
+      margin-top: 25px
+      background: #6BB6E4
+      border: none
+      border-radius: 10px
+      color: $white
+      font-size: 18px
+      width: 100%
+      text-align: center
+      padding: 15px
+    &__greenTitle
+      color: $green
+      font-size: 28px
+      margin-bottom: 40px
+    &__sentence
+      p
+        margin-bottom: 0
+        color: $black
+        font-size: 18px
+        line-height: 22px
+        & + p
+          margin-top: 25px
 
 // Adaptive
 
@@ -607,6 +814,26 @@
         img
           height: auto
           width: 100%
+
+    .election
+      &__card
+        padding-left: 30px
+      &__tab
+        width: 100%
+      &__warning
+        flex-direction: column
+        align-items: center
+        p
+          margin-left: 0
+          text-align: center
+          margin-top: 30px
+      &__result
+        flex-wrap: wrap
+      &__left
+        width: 100%
+      &__right
+        width: 100%
+        margin-top: 60px
 
 @media (min-width: 768px) and (max-width: 992px)
   .header-info
