@@ -1,0 +1,723 @@
+.header-info
+  padding: 15px 0
+  background: $white
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.05))
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logo
+    img
+      width: 115px
+  &__wrap
+    display: flex
+    align-items: center
+  &__links
+    display: flex
+    align-items: center
+  &__link
+    display: flex
+    align-items: center
+    height: 32px
+    font-size: 18px
+    color: $black
+    transition: 0.3s
+    & + .header-info__link
+      margin-left: 30px
+      padding-left: 30px
+      border-left: 1px solid #E0E0E0
+    &:hover
+      color: $green
+  &__actions
+    display: flex
+    align-items: center
+    margin-left: 60px
+    button
+      box-sizing: border-box
+      border-radius: 10px
+      background: transparent
+      height: 44px
+      width: 140px
+      justify-content: center
+      display: flex
+      align-items: center
+      font-size: 16px
+      &:first-child
+        border: 2px solid #25B072
+        color: $green
+      &:last-child
+        border: 2px solid #636363
+        color: $dark-grey
+        margin-left: 28px
+      img
+        width: 23px
+        height: 23px
+        margin-right: 10px
+
+.info-body
+  background-color: $white
+
+.info-title
+  font-size: 48px
+  color: $black
+
+.info-back
+  margin-top: 75px
+  margin-bottom: 65px
+  display: flex
+  align-items: center
+  margin-left: -56px
+  img
+    cursor: pointer
+    width: 26px
+    height: 26px
+    margin-right: 30px
+
+.white-bg
+  background: $white !important
+
+.info-site
+  .goal
+    padding-top: 80px
+    padding-bottom: 80px
+    background-image: url('../../img/info/goal-bg.jpg')
+    background-size: cover
+    background-position: top center
+    background-blend-mode: multiply
+
+  .banner-second
+    margin-bottom: 120px
+    &__inner
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 10px
+      overflow: hidden
+      background-color: $main
+      display: flex
+      justify-content: space-between
+      &>div
+        padding: 30px 60px 30px 70px
+        width: 45%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+        p
+          margin-bottom: 0
+          color: $white !important
+          & + p
+            margin-bottom: 20px
+            font-size: 18px
+            font-family: 'font-md'
+      img
+        width: 55%
+        height: 220px
+
+  .service
+    padding-top: 100px
+    padding-bottom: 100px
+    &__items
+      display: flex
+      justify-content: space-between
+      margin-top: 50px
+    &__item
+      width: 23%
+      img
+        width: 100%
+      p
+        color: $black
+        text-align: center
+        margin-top: 24px
+        padding: 0 50px
+
+  .news-card
+    background: #F2F4F8
+    padding-bottom: 70px
+    &__items
+      margin-top: 50px
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &__item
+      width: 24%
+      &:nth-last-child(-n+2)
+        width: 49.35%
+        margin-top: 55px
+        .news-card__img
+          img
+            height: 270px
+    &__img
+      margin-bottom: 22px
+      img
+        width: 100%
+        height: 192px
+        object-fit: cover
+        object-position: center
+    &__hashtage
+      font-size: 16px
+      font-family: 'font-sm'
+      color: $green
+      margin-bottom: 33px
+    &__description
+      font-size: 16px
+      line-height: 20px
+      color: $black
+      margin-bottom: 13px
+      padding-right: 15px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      height: 40px
+    &__date
+      color: $darkGrey
+      font-size: 14px
+      font-family: 'font-sm'
+
+  .akim
+    margin-bottom: 30px
+    &__items
+      margin-bottom: 20px
+      display: flex
+      flex-wrap: wrap
+    &__item
+      width: 31.333333%
+      box-shadow: 0px 3px 10px 1px rgba(36, 99, 115, 0.05)
+      border-radius: 5px
+      background-color: $white
+      overflow: hidden
+      margin-right: 3%
+      margin-bottom: 60px
+      position: relative
+      &:nth-child(3n+3)
+        margin-right: 0
+        &>img
+          width: 100%
+          height: 200px
+          border-radius: 5px 5px 0px 0px
+          object-fit: cover
+          object-position: center
+    &__item-wrap
+      padding: 16px 20px 16px 20px
+    &__item-title
+      font-size: 20px
+      color: $black
+      letter-spacing: -0.01em
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      width: 100%
+    &__item-descr
+      margin-top: 2px
+      color: #575757
+      font-size: 14px
+      letter-spacing: -0.01em
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+    &__item-subtitle
+      font-size: 16px
+      color: $darkGrey
+      margin-top: 12px
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 1
+      -webkit-box-orient: vertical
+      letter-spacing: -0.01em
+    &__item-footer
+      display: flex
+      margin-top: 20px
+      padding-top: 16px
+      justify-content: flex-end
+      border-top: 1px solid #F1F1F1
+    &__item-show
+      cursor: pointer
+      color: $green !important
+      font-size: 16px
+      text-decoration: underline !important
+    .pagination
+      &__all
+        color: $green !important
+
+  .council
+    margin-bottom: 30px
+    &__items
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+    &__item
+      background-color: $green
+      width: 47%
+      border-radius: 8.07143px
+      background-image: url('../../img/info/council-item-bg.svg')
+      background-size: contain
+      background-position: left center
+      background-repeat: no-repeat
+      overflow: hidden
+      margin-bottom: 6%
+      padding: 18px 30px 0px 30px
+      display: flex
+      align-items: flex-end
+    &__img
+      height: 100%
+      img
+        width: 240px
+        height: 100%
+        object-fit: cover
+    &__descr
+      padding-bottom: 30px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+      padding-top: 42px
+    &__quote
+      font-size: 14px
+      color: $white
+      line-height: 17px
+      position: relative
+      &::after
+        content: url('../../img/info/quote.svg')
+        position: absolute
+        top: 5px
+        left: -40px
+    &__name
+      font-size: 14px
+      margin-top: 25px
+      color: $white
+    &__btn
+      margin-top: 25px
+      border: 0.807143px solid #FFFFFF
+      box-sizing: border-box
+      border-radius: 5px
+      background: transparent
+      font-size: 12px
+      color: $white
+      padding: 6px 15px
+      width: 130px
+
+  .chart
+    margin-bottom: 100px
+    &__description
+      &>div
+        & + div
+          margin-top: 60px
+      p
+        font-family: 'font'
+        color: $black
+        margin-bottom: 0
+        font-size: 18px
+        line-height: 22px
+    &__title
+      font-size: 26px
+      color: $black
+      margin: 25px 0
+      font-family: 'font-md'
+
+  .branch
+    padding-bottom: 130px
+    &__form
+      position: relative
+    &__select
+      background: #FFFFFF
+      border-radius: 5px
+      width: 455px
+      padding: 20px 24px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      color: $black
+      font-size: 18px
+      cursor: pointer
+    &__options
+      display: none
+      margin-top: 10px
+      width: 455px
+      background: #FFFFFF
+      border-radius: 5px
+      padding: 20px 24px
+    &__option
+      display: flex
+      justify-content: space-between
+      align-items: center
+      font-size: 18px
+      color: $black
+      & + .branch__option
+        margin-top: 20px
+    &__result
+      background: #FFFFFF
+      box-shadow: 13px 11px 31px rgba(0, 0, 0, 0.05)
+      border-radius: 10px
+      width: 100%
+      margin-top: 75px
+      padding: 70px 50px
+      display: flex
+    &__left
+      width: 325px
+    &__right
+      margin-left: 150px
+    &__wrap
+      display: flex
+      border-bottom: 1px solid #F1F1F1
+      padding-bottom: 40px
+      margin-bottom: 40px
+    &__img
+      margin-right: 23px
+      width: 90px
+      height: 90px
+      border-radius: 100%
+      background: $green
+      padding: 5px
+      img
+        width: 80px
+        height: 80px
+        border-radius: 100%
+        object-fit: cover
+        object-position: center
+    &__info
+      p
+        &:first-child
+          font-size: 18px
+          color: $black
+          margin-bottom: 25px
+        &:last-child
+          margin-bottom: 0
+          color: #808080
+          font-size: 18px
+          line-height: 24px
+          padding-right: 18px
+    &__item
+      & + .branch__item
+        margin-top: 40px
+    &__item-title
+      font-size: 18px
+      color: $black
+      margin-bottom: 25px
+      display: flex
+      align-items: center
+      img
+        width: 20px
+        height: 20px
+        margin-right: 15px
+    &__item-subtitle
+      color: #808080
+      font-size: 18px
+      padding-left: 35px
+      & + .branch__item-subtitle
+        margin-top: 15px
+
+  .council-account
+    &__wrap
+      border-top: 0.5px solid #9C9C9C
+      display: flex
+    &__person
+      border-right: 0.5px solid #9C9C9C
+      height: 100%
+      width: 33%
+      padding-right: 80px
+      padding-top: 55px
+      padding-bottom: 80px
+    &__img
+      background-color: $green
+      background-image: url('../../img/info/council-account-bg.svg')
+      border-radius: 10px
+      width: 100%
+      background-repeat: no-repeat
+      background-size: 80%
+      background-position: center center
+      padding-top: 20px
+      display: flex
+      justify-content: center
+      img
+        width: 258px
+        height: 248px
+        object-fit: cover
+    &__name
+      color: #2C2C2C
+      font-size: 24px
+      margin-top: 40px
+    &__position
+      margin-top: 20px
+      font-size: 15px
+      color: #2C2C2C
+      line-height: 17px
+    &__form
+      border-top: 0.5px solid #9C9C9C
+      margin-right: -80px
+      padding-right: 80px
+      padding-top: 55px
+      margin-top: 55px
+      textarea
+        width: 100%
+        height: 105px
+        resize: none
+        background: #FFFFFF
+        border: 0.5px solid #9C9C9C
+        box-sizing: border-box
+        border-radius: 5px
+        padding: 15px 20px
+        font-size: 15px
+        color: $black
+        &::placeholder
+          color: #9C9C9C
+      .button
+        margin-top: 25px
+        width: 100%
+      p
+        margin-bottom: 0
+        color: #808080
+        font-size: 15px
+        line-height: 17px
+        margin-top: 25px
+    &__info
+      width: 67%
+      padding-bottom: 80px
+      padding-top: 50px
+      padding-left: 80px
+    &__title
+      font-size: 20px
+      color: $black
+      display: flex
+      align-items: center
+      font-family: 'font-md'
+      img
+        margin-right: 30px
+    &__descr
+      margin-top: 55px
+      p
+        color: $black
+        font-family: 'font'
+        font-size: 18px
+        margin-bottom: 0
+        line-height: 25px
+        & + p
+          margin-top: 20px
+
+// Adaptive
+
+@media (max-width: 767px)
+  .header-info
+    &__wrap
+      display: none
+    &__links
+      display: none
+
+  .info-back
+    margin-left: 0
+    margin-top: 40px
+    margin-bottom: 50px
+    img
+      width: 18px
+      height: 18px
+      margin-right: 25px
+
+  .info-title
+    font-size: 32px
+
+  .info-site
+    .council-account
+      &__wrap
+        flex-direction: column
+        border-top: 0
+      &__person
+        padding-right: 0px
+        padding-top: 0
+        padding-bottom: 50px
+        width: 100%
+        border-right: none
+        border-bottom: 0.5px solid #9C9C9C
+      &__img
+        overflow: hidden
+        img
+          width: 100%
+          height: auto
+      &__form
+        padding-right: 0px
+        margin-right: 0px
+      &__info
+        padding-left: 0px
+        width: 100%
+        padding-top: 50px
+
+    .akim
+      &__item
+        margin-right: 0
+        width: 100%
+        margin-bottom: 30px
+        img
+          width: 100%
+
+    .council
+      &__item
+        width: 100%
+        flex-direction: column-reverse
+        background-size: 50%
+        background-position: left bottom
+      &__img
+        width: 100%
+        img
+          width: 100%
+      &__descr
+        width: 100%
+        padding-top: 0
+      &__quote
+        padding-left: 70px
+        &::after
+          left: 0
+
+    .branch
+      &__select
+        width: 100%
+      &__options
+        width: 100%
+      &__result
+        flex-direction: column
+      &__left
+        width: 100%
+      &__right
+        margin-left: 0px
+        margin-top: 60px
+
+    .news-card
+      &__item
+        width: 100% !important
+        margin-bottom: 30px
+        &:nth-last-child(-n+2)
+          margin-top: 0
+      &__img
+        img
+          height: 280px !important
+
+    .banner-second
+      &__inner
+        flex-wrap: wrap
+        &>div
+          width: 100%
+          padding: 20px
+          .title
+            margin-bottom: 10px
+          p
+            text-align: center
+            width: 100%
+            & + p
+              font-size: 17px
+          .button
+            width: 100%
+        img
+          height: auto
+          width: 100%
+
+@media (min-width: 768px) and (max-width: 992px)
+  .header-info
+    &__links
+      display: none
+
+  .info-back
+    margin-left: 0
+    margin-top: 35px
+    margin-bottom: 35px
+
+  .info-site
+    .council-account
+      &__person
+        padding-right: 30px
+        width: 40%
+      &__img
+        overflow: hidden
+        img
+          width: 100%
+      &__form
+        padding-right: 30px
+        margin-right: -30px
+      &__info
+        padding-left: 30px
+        width: 60%
+
+    .akim
+      &__items
+        justify-content: space-between
+      &__item
+        width: 48%
+        margin-right: 0
+        margin-bottom: 4%
+
+    .council
+      &__item
+        width: 100%
+        justify-content: space-between
+      &__img
+        width: 35%
+        img
+          width: 100%
+      &__descr
+        width: 45%
+
+    .branch
+      &__result
+        flex-direction: column
+      &__left
+        width: 60%
+      &__right
+        margin-left: 0px
+        margin-top: 60px
+
+    .news-card
+      &__item
+        width: 48% !important
+        margin-bottom: 4%
+        &:nth-last-child(-n+2)
+          margin-top: 0
+
+    .banner-second
+      &__inner
+        &>div
+          width: 100%
+          padding-left: 40px
+          .title
+            margin-bottom: 15px
+        img
+          display: none
+
+    .service
+      &__items
+        flex-wrap: wrap
+      &__item
+        width: 48%
+        margin-bottom: 4%
+        p
+          padding: 0 15px
+
+@media (min-width: 993px) and (max-width: 1199px)
+  .header-info
+    &__links
+      display: none
+
+  .info-back
+    margin-left: 0
+
+  .info-site
+    .council-account
+      &__person
+        padding-right: 55px
+      &__img
+        img
+          width: 100%
+      &__form
+        padding-right: 55px
+        margin-right: -55px
+      &__info
+        padding-left: 55px
+
+    .banner-second
+      &__inner
+        &>div
+          width: 40%
+          padding: 30px 40px
+        img
+          width: 60%
+
+    .service
+      &__item
+        p
+          padding: 0 15px

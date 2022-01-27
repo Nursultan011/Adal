@@ -11,6 +11,7 @@
 @import './qamkor-site/account'
 @import './qamkor-site/collection'
 @import './qamkor-site/profile'
+@import './info-site/info'
 @import './_contructor'
 @import 'media'
 
@@ -57,11 +58,50 @@ h1,h2,h3,h4,h5,h6
 .align-center
     align-items: center
 
+.justify-center
+    justify-content: center
+
+.flex-column
+    flex-direction: column
+
+.justify-end
+    justify-content: flex-end
+
 .input-error
     border: 1px solid red !important
 
 .error-text
     color: red !important
+
+.pt-70
+    padding-top: 70px
+
+.mt-30
+    margin-top: 30px
+
+.mb-10
+    margin-bottom: 10px !important
+
+.mt-20
+    margin-top: 20px !important
+
+.mt-70
+    margin-top: 70px
+
+.mb-50
+    margin-bottom: 50px
+
+.mt-0
+    margin-top: 0 !important
+
+.mr-0
+    margin-right: 0 !important
+
+.ml-0
+    margin-left: 0 !important
+
+.mb-0
+    margin-bottom: 0 !important
 
 .button
     background: $green
@@ -536,9 +576,113 @@ footer
         font-size: 16px
         text-decoration: underline !important
         margin-top: 8px
+    &__subtitle
+        color: #575757
+        font-size: 18px
+        margin-bottom: 40px
+        width: 80%
+    &__checkbox
+        margin-top: 40px
+        label
+            color: $black
+            font-size: 17px
+            display: block
+            margin-bottom: 10px
+        &>div
+            display: flex
+            align-items: center
+            div
+                display: flex
+                align-items: center
+                & + div
+                    margin-left: 15px
+                span
+                    font-size: 16px
+                    color: $black
+                    margin-left: 10px
+        .checkbox
+            width: 18px
+            height: 18px
+            border: 1px solid #ACACAC
+            border-radius: 3px
+            border-radius: 3px
+            visibility: hidden
+            cursor: pointer
+            position: relative
+            font-size: 17px
+            &:after
+                content: " "
+                background-color: white
+                border: 1px solid #ACACAC
+                position: absolute
+                border-radius: 3px
+                left: 0
+                @include flex(center,center)
+                top: 0
+                width: 100%
+                height: 100%
+                visibility: visible
+            &:checked:after
+                border: none
+                border-radius: 3px
+                background-color: $green
+                content: "\2713"
+    &__agreement
+        display: flex
+        align-items: center
+        margin-top: 40px
+        p
+            font-size: 16px
+            color: $black
+            margin-bottom: 0
+            margin-left: 10px
+            a
+                color: $green !important
+                margin-left: 3px
+                text-decoration: underline !important
+        .checkbox
+            width: 18px
+            height: 18px
+            border: 1px solid #ACACAC
+            border-radius: 3px
+            border-radius: 3px
+            visibility: hidden
+            cursor: pointer
+            position: relative
+            font-size: 17px
+            &:after
+                content: " "
+                background-color: white
+                border: 1px solid #ACACAC
+                position: absolute
+                border-radius: 3px
+                left: 0
+                @include flex(center,center)
+                top: 0
+                width: 100%
+                height: 100%
+                visibility: visible
+            &:checked:after
+                border: none
+                border-radius: 3px
+                background-color: $green
+                content: "\2713"
     &__flex
         display: flex
         align-items: center
+    &__textarea
+        background: #F2F4F8
+        border-radius: 5px
+        width: 100%
+        resize: none
+        height: 265px
+        border: none
+        font-size: 18px
+        line-height: 20px
+        padding: 25px 30px
+        color: $black
+        &::placeholder
+            color: #BCBCBC
     &__registration
         color: #ACACAC !important
         font-size: 20px
