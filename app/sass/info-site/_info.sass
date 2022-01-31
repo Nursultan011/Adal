@@ -53,6 +53,8 @@
         width: 23px
         height: 23px
         margin-right: 10px
+  &__burger
+    display: none
 
 .info-body
   background-color: $white
@@ -585,7 +587,158 @@
     &__card
       background: #FFFFFF
       border-radius: 10px
-      width: 30%
+      width: 31.5%
+      padding: 20px
+    &__avatar
+      margin-top: 30px
+      width: 100%
+      display: flex
+      justify-content: center
+      img
+        width: 120px
+        height: 120px
+        object-fit: cover
+        object-position: center
+        border-radius: 100%
+    &__settings
+      margin-top: 25px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      div
+        display: flex
+        align-items: center
+        color: $greyText
+        font-size: 15px
+        text-decoration: underline
+        cursor: pointer
+        img
+          margin-right: 7px
+          width: 16px
+          height: 16px
+    &__status
+      background-color: $green
+      margin: 25px -20px 0 -20px
+      padding: 12px 20px
+      text-align: center
+      font-size: 18px
+      color: $white
+    &__code
+      margin-top: 20px
+      color: $black
+      text-align: center
+      font-size: 18px
+      display: flex
+      align-items: center
+      span
+        margin-left: 5px
+        font-size: 20px
+        color: $black
+        font-family: 'font-md'
+    &__lists
+      margin-top: 35px
+      margin-bottom: 25px
+    &__list
+      color: $black
+      font-size: 18px
+      display: flex
+      align-items: center
+      & + .info-profile__list
+        margin-top: 18px
+      img
+        width: 20px
+        height: 20px
+        margin-right: 10px
+    &__title
+      text-transform: uppercase
+      color: $black
+      font-size: 22px
+      display: flex
+      align-items: center
+      img
+        width: 25px
+        height: 25px
+        margin-right: 10px
+    &__wrap
+      display: flex
+      justify-content: space-between
+      align-items: center
+      border-bottom: 1px solid #F1F1F1
+      padding-bottom: 20px
+      margin-bottom: 20px
+    &__add
+      border: none
+      color: $greyText
+      font-size: 15px
+      cursor: pointer
+      text-decoration: underline
+      background: transparent
+    &__item
+      border: 1px solid #F1F1F1
+      box-sizing: border-box
+      border-radius: 10px
+      padding: 15px
+      & + .info-profile__item
+        margin-top: 15px
+    &__item-suptitle
+      color: $greyText
+      font-size: 12px
+      margin-bottom: 10px
+    &__item-title
+      font-size: 18px
+      color: $black
+      font-family: 'font-md'
+    &__item-subtitle
+      color: $greyText
+      margin-top: 10px
+      font-size: 16px
+    &__item-date
+      margin-top: 5px
+      color: $greyText
+      font-size: 12px
+    &__item-wrap
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &__item-status
+      font-size: 14px
+      color: $white
+      background: $green
+      border-radius: 5px
+      padding: 3px 7px
+    &__item-error
+      font-size: 14px
+      color: $white
+      background: #FF3A44
+      border-radius: 5px
+      padding: 3px 7px
+    &__empty
+      color: $greyText
+      font-size: 18px
+      width: 100%
+      margin-top: 50px
+      margin-bottom: 50px
+      text-align: center
+    &__descr
+      margin-top: 30px
+      p
+        margin-bottom: 0
+        &:first-child
+          font-size: 20px
+          color: $black
+        &:last-child
+          margin-top: 4px
+          font-size: 15px
+          color: $darkGrey
+    &__fill
+      border-top: 1px solid #F1F1F1
+      margin-top: 30px
+      padding-top: 30px
+    &__address
+      font-size: 20px
+      color: $black
+      margin-top: 30px
+      margin-bottom: 30px
 
   .election
     padding-bottom: 100px
@@ -767,10 +920,15 @@
 
 @media (max-width: 767px)
   .header-info
-    &__wrap
-      display: none
+    .container-lg
+      padding-left: 20px
+      padding-right: 20px
     &__links
       display: none
+    &__actions
+      display: none
+    &__burger
+      display: block
 
   .info-back
     margin-left: 0
@@ -929,10 +1087,19 @@
           font-size: 20px
           padding: 0 0
 
+    .info-profile
+      &__inner
+        flex-wrap: wrap
+      &__card
+        width: 100%
+        margin-bottom: 30px
+
 @media (min-width: 768px) and (max-width: 992px)
   .header-info
     &__links
       display: none
+    &__burger
+      display: block
 
   .info-back
     margin-left: 0
@@ -1019,10 +1186,19 @@
       &__info
         padding-left: 60px
 
+    .info-profile
+      &__inner
+        flex-wrap: wrap
+      &__card
+        width: 48%
+        margin-bottom: 30px
+
 @media (min-width: 993px) and (max-width: 1199px)
   .header-info
     &__links
       display: none
+    &__burger
+      display: block !important
 
   .info-back
     margin-left: 0
