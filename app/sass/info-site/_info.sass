@@ -55,6 +55,29 @@
         margin-right: 10px
   &__burger
     display: none
+  &__sidebar
+    display: flex
+    align-items: center
+    img
+      margin-left: 10px
+  &__sidebar-content
+    background: $white
+    border-radius: 10px
+    padding: 0px 30px
+    position: absolute
+    top: 15px
+    left: 260px
+    z-index: 11
+    a
+      display: block
+      transition: 0.3s
+      color: $black
+      font-size: 18px
+      padding: 14px 0
+      & + a
+        border-top: 1px solid #F1F1F1
+      &:hover
+        color: $green
 
 .info-body
   background-color: $white
@@ -90,6 +113,7 @@
       padding-bottom: 65px
       display: flex
       justify-content: center
+      position: relative
     &__center
       width: 600px
       height: 680px
@@ -980,6 +1004,9 @@
     &__burger
       display: block
 
+  .header-info__sidebar-content
+    display: none
+
   .info-back
     margin-left: 0
     margin-top: 40px
@@ -1165,6 +1192,9 @@
       margin-left: 20px
       display: block
 
+  .header-info__sidebar-content
+    display: none
+
   .info-back
     margin-left: 0
     margin-top: 35px
@@ -1276,6 +1306,9 @@
   .info-back
     margin-left: 0
 
+  .header-info__sidebar-content
+    display: none
+
   .info-site
     .main-block
       &__title
@@ -1320,3 +1353,7 @@
       &__center
         width: 560px
         padding: 15px
+
+@media (max-width: 1399px)
+  .header-info__sidebar-content
+    left: 170px
