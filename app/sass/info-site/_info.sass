@@ -2,6 +2,9 @@
   padding: 15px 0
   background: $white
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.05))
+  width: 100%
+  position: fixed
+  z-index: 1111
   &__inner
     display: flex
     justify-content: space-between
@@ -65,8 +68,7 @@
     border-radius: 10px
     padding: 0px 30px
     position: absolute
-    top: 15px
-    left: 260px
+    top: 65px
     z-index: 11
     a
       display: block
@@ -102,6 +104,7 @@
   background: $white !important
 
 .info-site
+  padding-top: 74px
   .main-block
     background-color: #25B072
     overflow: hidden
@@ -994,6 +997,7 @@
 
 @media (max-width: 767px)
   .header-info
+    position: relative
     .container-lg
       padding-left: 20px
       padding-right: 20px
@@ -1003,6 +1007,25 @@
       display: none
     &__burger
       display: block
+
+  .burger-info
+    .burger-menu__header
+      &>img
+        width: 115px
+    .parties
+      margin-left: 15px
+      margin-top: 15px
+      margin-bottom: 20px
+      a
+        & + a
+          margin-top: 10px !important
+    .header-info__actions
+      display: block !important
+      margin-left: 0
+      margin-top: 20px
+      button
+        margin-left: 0 !important
+        margin-top: 15px
 
   .header-info__sidebar-content
     display: none
@@ -1020,6 +1043,7 @@
     font-size: 32px
 
   .info-site
+    padding-top: 0px
     .main-block
       background-position: center
       background-size: 188% 100%
@@ -1353,7 +1377,3 @@
       &__center
         width: 560px
         padding: 15px
-
-@media (max-width: 1399px)
-  .header-info__sidebar-content
-    left: 170px
