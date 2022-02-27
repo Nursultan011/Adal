@@ -279,10 +279,15 @@
       justify-content: space-between
       flex-wrap: wrap
     &__item
+      margin-bottom: 35px
       width: 24%
-      &:nth-last-child(-n+2)
+      &:nth-child(6n+6)
         width: 49.35%
-        margin-top: 55px
+        .news-card__img
+          img
+            height: 270px
+      &:nth-child(6n+5)
+        width: 49.35%
         .news-card__img
           img
             height: 270px
@@ -1210,11 +1215,55 @@
 
 @media (min-width: 768px) and (max-width: 992px)
   .header-info
+    position: relative
     &__links
       display: none
     &__burger
       margin-left: 20px
       display: block
+
+  .burger-info
+    display: block !important
+    background-color: #144356
+    height: 100vh
+    padding-top: 15px
+    padding-bottom: 30px
+    .container
+      padding-left: 12px
+      padding-right: 12px
+      max-width: 100%
+      width: 100%
+    .burger-menu__header
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &>img
+        width: 115px
+      .burger
+        img
+          width: 24px
+          height: 24px
+    .burger-menu__body
+      padding: 70px 0
+      display: flex
+      justify-content: space-between
+      nav
+        a
+          color: $white !important
+          display: block
+          font-size: 18px
+          font-family: 'font-md'
+          & + a
+            margin-top: 25px
+    .parties
+      margin-left: 15px
+      margin-top: 15px
+      margin-bottom: 20px
+      a
+        & + a
+          margin-top: 10px !important
+    .header-info__actions
+      display: none !important
 
   .header-info__sidebar-content
     display: none
@@ -1225,6 +1274,7 @@
     margin-bottom: 35px
 
   .info-site
+    padding-top: 0
     .main-block
       background-position: center
       background-size: 145% 100%
@@ -1321,11 +1371,54 @@
 
 @media (min-width: 993px) and (max-width: 1199px)
   .header-info
+    position: relative
     &__links
       display: none
     &__burger
       margin-left: 20px
-      display: block !important
+      display: block
+
+  .burger-info
+    display: block !important
+    background-color: #144356
+    height: 100vh
+    padding-top: 15px
+    padding-bottom: 30px
+    .burger-menu__header
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &>img
+        width: 115px
+      .burger
+        display: block !important
+        img
+          width: 24px
+          height: 24px
+    .burger-menu__body
+      padding: 70px 0
+      display: flex
+      justify-content: space-between
+      nav
+        a
+          color: $white !important
+          display: block
+          font-size: 18px
+          font-family: 'font-md'
+          & + a
+            margin-top: 25px
+    .parties
+      margin-left: 15px
+      margin-top: 15px
+      margin-bottom: 20px
+      a
+        & + a
+          margin-top: 10px !important
+    .header-info__actions
+      display: none !important
+
+  .header-info__sidebar-content
+    display: none
 
   .info-back
     margin-left: 0
@@ -1334,6 +1427,7 @@
     display: none
 
   .info-site
+    padding-top: 0
     .main-block
       &__title
         font-size: 44px
@@ -1372,6 +1466,7 @@
         margin-top: 60px
 
 @media (min-width: 1200px) and (max-width: 1350px)
+
   .info-site
     .main-block
       &__center
